@@ -1,48 +1,107 @@
-/* ============================================
+/*============================================
    ATIVIDADE 5 - Estilize o Cartao de Contato!
-   ============================================
+   ============================================*/
 
-   Dicas do que voce pode fazer:
+/* 1. CORPO DA PAGINA (body) */
+body {
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-   1. CORPO DA PAGINA (body)
-      - Mude a cor de fundo (background-color)
-      - Escolha uma fonte bonita (font-family)
-      - Defina uma cor de texto padrao (color)
+/* 2. HEADER */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
 
-   2. HEADER
-      - De uma cor de fundo diferente
-      - Centralize o texto (text-align)
-      - Adicione espaco interno (padding)
+/* 3. SECOES (section) */
+section {
+  background-color: #ffffff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
 
-   3. SECOES (section)
-      - Adicione margem entre elas (margin)
-      - Coloque borda arredondada (border-radius)
-      - Adicione sombra (box-shadow)
-      - Defina uma largura maxima (max-width) e centralize com margin: auto
+/* 4. BOTOES (button) */
+button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
-   4. BOTOES (button)
-      - Mude cor de fundo e cor do texto
-      - Tire a borda padrao (border: none)
-      - Arredonde os cantos (border-radius)
-      - Mude o cursor (cursor: pointer)
-      - Adicione efeito hover: button:hover { }
+button:hover {
+  background-color: #2980b9;
+}
 
-   5. FORMULARIO
-      - Estilize os inputs e textarea (padding, border, border-radius)
-      - Faca os campos ocuparem toda largura (width: 100%)
-      - Espaco entre os campos (margin-bottom)
+/* 5. FORMULARIO */
+input, textarea {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não quebre o width: 100% */
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
 
-   6. BARRAS DE PROGRESSO
-      - .barra-progresso: de uma cor de fundo clara, altura fixa (height), border-radius
-      - .progresso: cor de fundo forte, height: 100%, border-radius
+/* 6. BARRAS DE PROGRESSO */
+.barra-progresso {
+  background-color: #e0e0e0;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Garante que a barra interna não vaze pelos cantos */
+}
 
-   7. MODO ESCURO
-      - Crie a classe: body.modo-escuro { }
-      - Mude background-color e color para cores escuras
-      - Estilize secoes e inputs tambem dentro de .modo-escuro
+.progresso {
+  background-color: #2ecc71;
+  height: 100%;
+  border-radius: 10px;
+  /* Dica extra: defina o 'width' direto no HTML (ex: style="width: 70%") */
+}
 
-   8. FOOTER
-      - Cor de fundo, texto centralizado, padding
+/* 7. MODO ESCURO */
+body.modo-escuro {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-   Bom trabalho!
-*/
+body.modo-escuro header,
+body.modo-escuro footer {
+  background-color: #000000;
+}
+
+body.modo-escuro section {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.modo-escuro input, 
+body.modo-escuro textarea {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+/* 8. FOOTER */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}                            
