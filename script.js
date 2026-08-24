@@ -51,6 +51,21 @@ document.getElementById('btn-visita').addEventListener('click', function() {
 //    - Se tudo preenchido, mostre uma mensagem no #resposta-form:
 //      "Obrigado, [nome]! Sua mensagem foi enviada."
 //    - Limpe os campos depois: campo.value = ''
-     
+      document.getElementById('form-contato').addEventListener('submit', function(evento) {
+          evento.preventDefault();
+          let nome = document.getElementById('nome').value;
+          let email = document.getElementById('email').value;
+          let mensagem = document.getElementById('mensagem').value;
+
+          if (!nome || !email || !mensagem) {
+              alert('Preencha todos os campos!');
+          } else {
+              document.getElementById('resposta-form').textContent = `Obrigado, ${nome}! Sua mensagem foi enviada.`;
+              document.getElementById('nome').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('mensagem').value = '';
+          }
+      });
+
 //
 // Comece pelo exercicio 1 e va ate o 4. Boa sorte!
