@@ -18,18 +18,26 @@
              document.getElementById('btn-tema').textContent = 'Modo Escuro';
          }
      });
+
 //
 // 2. CONTADOR DE VISITAS (#btn-visita e #numero-visitas)
 //    - Crie uma variavel: let visitas = 0;
 //    - Pegue o botao e o span com getElementById()
 //    - No clique do botao, incremente a variavel (visitas++)
 //    - Atualize o texto do span: span.textContent = visitas
+let visitas = 0;
+document.getElementById('btn-visita').addEventListener('click', function() {
+    visitas++;
+    document.getElementById('numero-visitas').textContent = visitas;
+});
+
 //
 // 3. BARRAS DE PROGRESSO (.progresso)
 //    - Pegue todos os elementos com document.querySelectorAll('.progresso')
 //    - Use um for ou forEach para percorrer cada um
 //    - Leia o valor: elemento.getAttribute('data-valor')
 //    - Aplique a largura: elemento.style.width = valor + '%'
+     
 //
 // 4. FORMULARIO (#form-contato)
 //    - Pegue o formulario com getElementById()
@@ -40,5 +48,6 @@
 //    - Se tudo preenchido, mostre uma mensagem no #resposta-form:
 //      "Obrigado, [nome]! Sua mensagem foi enviada."
 //    - Limpe os campos depois: campo.value = ''
+     
 //
 // Comece pelo exercicio 1 e va ate o 4. Boa sorte!
